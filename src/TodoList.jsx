@@ -1,5 +1,3 @@
-import { TodoItem } from "./TodoItem"
-
 export function TodoList({ todos }) {
 
     return (
@@ -9,10 +7,7 @@ export function TodoList({ todos }) {
                 return (
                     <TodoItem
                         {...todo}
-                        // id={todo.id}
-                        // completed={todo.completed}
-                        // title={todo.title}
-                        key="todo.id"
+                        key={todo.id}
                         toggleTodo={toggleTodo}
                         deleteTodo={deleteTodo}
                     />

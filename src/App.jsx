@@ -14,8 +14,7 @@ export default function App() {
 
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(todos))
-  },
-    [todos])
+  }, [todos])
 
   function addTodo(title) {
     setTodos((currentTodos) => {
@@ -37,7 +36,7 @@ export default function App() {
     setTodos(currentTodos => {
       return currentTodos.map(todo => {
         if (todo.id === id) {
-          return { ...todo, complete }
+          return { ...todo, completed }
         }
 
         return todo
